@@ -1,0 +1,94 @@
+.depa-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.depa-header__bar {
+  border-bottom: 1px solid rgba(23, 50, 74, 0.08);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(23, 50, 74, 0.06);
+}
+
+.depa-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  padding-block: 16px;
+}
+
+.depa-header__brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.depa-header__logo-wrap {
+  position: relative;
+  width: auto;
+  height: 48px;
+}
+
+.depa-header__logo {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.depa-header__nav {
+  display: none;
+  align-items: center;
+  gap: 36px;
+}
+
+.depa-header__link {
+  color: var(--primary-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.depa-header__link:hover {
+  color: var(--primary-accent);
+}
+
+.depa-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.depa-header__cta {
+  padding-inline: 28px;
+  font-size: 0.95rem;
+}
+
+.depa-header__cta-mobile {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .depa-header__inner {
+    min-height: 96px;
+    padding-block: 18px;
+  }
+
+  .depa-header__logo-wrap {
+    height: 56px;
+  }
+
+  .depa-header__nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 639px) {
+  .depa-header__cta-label {
+    display: none;
+  }
+
+  .depa-header__cta-mobile {
+    display: inline;
+  }
+}

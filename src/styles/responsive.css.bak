@@ -1,0 +1,90 @@
+@media (max-width: 1023px) {
+  .depa-header__nav {
+    display: none;
+  }
+
+  .process-visual__frame {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-shell {
+    padding-block: 84px;
+  }
+
+  .section-heading-group {
+    margin-bottom: 40px;
+  }
+
+  .hero-section {
+    padding: 40px 0 84px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.75rem, 12vw, 4rem);
+  }
+
+  .hero-subtitle,
+  .hero-supporting,
+  .process-copy,
+  .section-copy {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .hero-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .process-step {
+    padding: 24px;
+  }
+
+  .process-step__row {
+    gap: 18px;
+  }
+
+  .process-step__number {
+    min-width: 3.2rem;
+  }
+
+  .process-visual {
+    padding: 18px;
+  }
+
+  .process-visual__frame {
+    min-height: 420px;
+    padding: 28px 24px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .depa-header__inner {
+    min-height: 80px;
+    padding-block: 14px;
+  }
+
+  .depa-header__logo-wrap {
+    height: 44px;
+  }
+
+  .depa-header__cta {
+    padding-inline: 20px;
+    min-height: 50px;
+  }
+
+  .hero-highlights {
+    gap: 10px;
+  }
+
+  .hero-highlight-chip {
+    font-size: 0.82rem;
+  }
+}
