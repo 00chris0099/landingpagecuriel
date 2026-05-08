@@ -6,7 +6,7 @@ export default function StrongCTASection() {
   const { openModal } = useModal();
 
   return (
-    <section className="finalcta-section">
+    <section className="finalcta-section" data-section="final-cta">
       {/* Inspector image breaking out of layout */}
       <div className="container">
         <div className="finalcta-layout">

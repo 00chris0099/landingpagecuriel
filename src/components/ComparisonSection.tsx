@@ -20,7 +20,7 @@ export default function ComparisonSection() {
   const { openModal } = useModal();
 
   return (
-    <section className="comparison-section">
+    <section className="comparison-section" data-section="comparacion">
       <div className="container">
 
         <div className="comparison-header">

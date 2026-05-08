@@ -12,10 +12,12 @@ import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import TrackingProvider from '@/components/TrackingProvider';
 
 export default function Home() {
   return (
     <ModalProvider>
+      <TrackingProvider />
       <div className="min-h-screen">
         <Header />
         <main className="site-main">

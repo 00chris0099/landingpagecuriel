@@ -33,7 +33,7 @@ export default function ProblemSection() {
   const { openModal } = useModal();
 
   return (
-    <section className="problem-section">
+    <section className="problem-section" data-section="problema">
       <div className="container">
         <div className="problem-intro">
           <span className="eyebrow">EL PROBLEMA</span>

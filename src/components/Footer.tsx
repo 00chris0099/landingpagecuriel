@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" data-section="footer">
       <div className="site-footer__ambient" aria-hidden="true" />
       <div className="container site-footer__inner">
         <div className="site-footer__grid">
