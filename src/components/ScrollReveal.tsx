@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import { useEffect, useRef, ReactNode } from 'react';
 
 interface ScrollRevealProps {
@@ -14,6 +12,11 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      ref.current?.classList.add('revealed');
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -51,6 +54,11 @@ export function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      ref.current?.classList.add('revealed');
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

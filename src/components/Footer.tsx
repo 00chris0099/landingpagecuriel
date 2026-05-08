@@ -1,28 +1,29 @@
 export default function Footer() {
   return (
-    <footer className="page-section border-t border-[rgba(23,50,74,0.1)] bg-[rgba(255,255,255,0.82)] backdrop-blur-sm">
-      <div className="container footer-shell">
-        <div className="grid gap-8 md:grid-cols-4">
-          <div>
-            <p className="mb-4 text-2xl font-heading italic text-[#17324A]">DEPAINSPECT</p>
-            <p className="text-sm leading-6 text-[#5A6B7A]">
+    <footer className="site-footer">
+      <div className="site-footer__ambient" aria-hidden="true" />
+      <div className="container site-footer__inner">
+        <div className="site-footer__grid">
+          <div className="site-footer__brand-col">
+            <p className="site-footer__brand">DEPAINSPECT</p>
+            <p className="site-footer__description">
               Inspección técnica de departamentos antes de comprar, recibir o alquilar. Claridad para decidir mejor.
             </p>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-[#17324A]">Navegación</h3>
-            <ul className="space-y-2 text-sm text-[#5A6B7A]">
-              <li><a href="#hero" className="hover:text-[#17324A]">Inicio</a></li>
-              <li><a href="#que-revisamos" className="hover:text-[#17324A]">Qué revisamos</a></li>
-              <li><a href="#como-funciona" className="hover:text-[#17324A]">Cómo funciona</a></li>
-              <li><a href="#preguntas" className="hover:text-[#17324A]">Preguntas</a></li>
+          <div className="site-footer__column">
+            <h3 className="site-footer__heading">Navegación</h3>
+            <ul className="site-footer__list">
+              <li><a href="#hero" className="site-footer__link">Inicio</a></li>
+              <li><a href="#que-revisamos" className="site-footer__link">Qué revisamos</a></li>
+              <li><a href="#como-funciona" className="site-footer__link">Cómo funciona</a></li>
+              <li><a href="#preguntas" className="site-footer__link">Preguntas</a></li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-[#17324A]">Servicio</h3>
-            <ul className="space-y-2 text-sm text-[#5A6B7A]">
+          <div className="site-footer__column">
+            <h3 className="site-footer__heading">Servicio</h3>
+            <ul className="site-footer__list">
               <li>Compra de departamento</li>
               <li>Entrega de inmueble</li>
               <li>Inspección de acabados</li>
@@ -30,43 +31,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-[#17324A]">Contacto</h3>
-            <div className="space-y-2 text-sm text-[#5A6B7A]">
-              <a href="https://wa.me/51999999999?text=Hola" className="block hover:text-[#17324A]">+51 999 999 999</a>
-              <a href="mailto:info@inspekta.pe" className="block hover:text-[#17324A]">info@inspekta.pe</a>
-              <span className="block">Lima Metropolitana</span>
+          <div className="site-footer__column">
+            <h3 className="site-footer__heading">Contacto</h3>
+            <div className="site-footer__list">
+              <a href="https://wa.me/51999999999?text=Hola" className="site-footer__link">+51 999 999 999</a>
+              <a href="mailto:info@inspekta.pe" className="site-footer__link">info@inspekta.pe</a>
+              <span>Lima Metropolitana</span>
             </div>
           </div>
         </div>
 
-        <div className="footer-social">
-          <h3 className="footer-social-title">Síguenos</h3>
-          <div className="footer-social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <div className="site-footer__social-row">
+          <h3 className="site-footer__social-title">Síguenos</h3>
+          <div className="site-footer__social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="site-footer__social-link">
               <img src="/image/redes/instagram.png" alt="Instagram" />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="site-footer__social-link">
               <img src="/image/redes/tiktok.png" alt="TikTok" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="site-footer__social-link">
               <img src="/image/redes/facebook.png" alt="Facebook" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="site-footer__social-link">
               <img src="/image/redes/linkedin.png" alt="LinkedIn" />
             </a>
-            <a href="https://wa.me/51999999999?text=Hola" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/51999999999?text=Hola" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="site-footer__social-link">
               <img src="/image/redes/whatsapp.png" alt="WhatsApp" />
             </a>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-[rgba(23,50,74,0.1)] pt-6 text-xs text-[#5A6B7A] sm:flex-row sm:items-center sm:justify-between">
+        <div className="site-footer__bottom">
           <p>© 2026 DepaInspect. Todos los derechos reservados.</p>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-[#17324A]">Términos</a>
-            <a href="#" className="hover:text-[#17324A]">Privacidad</a>
-            <a href="#contacto" className="hover:text-[#17324A]">Contacto</a>
+          <div className="site-footer__bottom-links">
+            <a href="#" className="site-footer__meta-link">Términos</a>
+            <a href="#" className="site-footer__meta-link">Privacidad</a>
+            <a href="#contacto" className="site-footer__meta-link">Contacto</a>
           </div>
         </div>
       </div>

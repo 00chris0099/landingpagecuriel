@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useModal } from './ModalContext';
+import { submitLeadWebhook } from '@/lib/submitLeadWebhook';
 
 const stats = [
   { value: '+200', label: 'inspecciones' },
@@ -16,12 +17,18 @@ const logos = [
   { src: '/image/logos/portales.png', alt: 'Los Portales' },
 ];
 
+const marqueeLogos = [...logos, ...logos];
+
 export default function Hero() {
   const { openModal } = useModal();
   const [form, setForm] = useState({ nombre: '', telefono: '', tipo: '' });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    void submitLeadWebhook({
+      ...form,
+      origen: 'hero',
+    });
     const message = `Hola, quiero agendar una inspección. Nombre: ${form.nombre}. Teléfono: ${form.telefono}. Tipo de inmueble: ${form.tipo}.`;
     window.open(`https://wa.me/51999999999?text=${encodeURIComponent(message)}`, '_blank');
   };
@@ -127,11 +134,17 @@ export default function Hero() {
         </div>
 
         <div className="hero-logos-strip" aria-label="Respaldo visual de constructoras">
-          {logos.map((logo) => (
-            <div key={logo.alt} className="hero-logo-item">
+          <div className="hero-logos-track">
+            {marqueeLogos.map((logo, index) => (
+              <div
+                key={`${logo.alt}-${index}`}
+                className="hero-logo-item"
+                aria-hidden={index >= logos.length}
+              >
               <img src={logo.src} alt={logo.alt} className="hero-logo-image" />
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="hero-form-shell surface-card">

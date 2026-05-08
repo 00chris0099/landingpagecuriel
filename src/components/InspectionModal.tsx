@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { submitLeadWebhook } from '@/lib/submitLeadWebhook';
 
 interface InspectionModalProps {
   isOpen: boolean;
@@ -24,6 +25,10 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    void submitLeadWebhook({
+      ...form,
+      origen: 'modal',
+    });
     const msg = `Hola, quiero agendar una inspección. Nombre: ${form.nombre}. Teléfono: ${form.telefono}. Tipo de inmueble: ${form.tipo}.`;
     setTimeout(() => {
       window.open(`https://wa.me/51999999999?text=${encodeURIComponent(msg)}`, '_blank');
