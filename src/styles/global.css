@@ -50,7 +50,7 @@ html {
 }
 
 body {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--white);
   background-image:
     linear-gradient(var(--line-grid) 1px, transparent 1px),
@@ -80,15 +80,16 @@ img { display: block; max-width: 100%; }
   font-size: clamp(38px, 5vw, 72px);
   font-style: italic;
   letter-spacing: -0.03em;
-  line-height: 0.95;
+  line-height: 0.92;
   color: var(--primary-dark);
+  text-wrap: balance;
 }
 
 .section-copy {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
   color: var(--text-muted);
-  line-height: 1.85;
-  max-width: 680px;
+  line-height: 1.72;
+  max-width: 62ch;
 }
 
 /* ── Eyebrow ── */
@@ -101,8 +102,9 @@ img { display: block; max-width: 100%; }
   border-radius: var(--radius-full);
   background: rgba(201, 168, 93, 0.08);
   color: var(--primary-accent);
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -120,8 +122,9 @@ img { display: block; max-width: 100%; }
   border: none;
   background: var(--primary-accent);
   color: var(--text-dark);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   box-shadow: var(--shadow-accent);
   cursor: pointer;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
@@ -152,8 +155,8 @@ img { display: block; max-width: 100%; }
   border: 1.5px solid var(--border-light);
   background: rgba(255,255,255,0.9);
   color: var(--primary-dark);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -287,8 +290,9 @@ img { display: block; max-width: 100%; }
 
 .modal-eyebrow {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
   letter-spacing: 0.2em;
   color: var(--primary-accent);
   text-transform: uppercase;
@@ -306,8 +310,8 @@ img { display: block; max-width: 100%; }
 
 .modal-subtitle {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 .modal-form {
@@ -323,8 +327,9 @@ img { display: block; max-width: 100%; }
 }
 
 .modal-field label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--primary-dark);
 }
 
@@ -355,7 +360,7 @@ img { display: block; max-width: 100%; }
 
 .modal-note {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   margin-top: 4px;
 }
@@ -427,8 +432,8 @@ img { display: block; max-width: 100%; }
 .site-header__link {
   padding: 8px 14px;
   border-radius: var(--radius-full);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--text-mid);
   transition: all var(--transition-fast);
 }

@@ -50,7 +50,7 @@ export default function StrongCTASection() {
               </div>
               <div className="finalcta-urgency-item">
                 <img src="/image/icons/file-pdf.png" alt="" className="finalcta-urgency-icn" />
-                <span>Informe visual en 24h</span>
+                <span>Informe visual en 3 horas</span>
               </div>
             </div>
 

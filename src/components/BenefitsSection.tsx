@@ -15,7 +15,7 @@ const benefits = [
     icon: '/image/icons/camera.png',
     title: 'Decides con evidencia',
     text: 'Tienes fotos, observaciones e informe visual para decidir con claridad. No "crees" que está bien. Lo sabes.',
-    stat: 'Informe en 24h',
+    stat: 'Informe en 3 horas',
   },
   {
     num: '03',

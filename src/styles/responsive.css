@@ -1,90 +1,194 @@
 @media (max-width: 1023px) {
-  .depa-header__nav {
-    display: none;
+  .container {
+    width: min(calc(100% - 40px), var(--container-max));
   }
 
-  .process-visual__frame {
-    min-height: 480px;
+  .problem-card--featured {
+    overflow: hidden;
+  }
+
+  .problem-card-mockup {
+    max-width: 100%;
+  }
+
+  .process-visual-sticky {
+    position: static;
+  }
+
+  .process-inspector-img {
+    max-width: 100%;
+  }
+
+  .benefits-header {
+    align-items: flex-start;
+  }
+
+  .benefits-header-stats {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 767px) {
-  .section-shell {
-    padding-block: 84px;
+  :root {
+    --section-v: 72px;
   }
 
-  .section-heading-group {
-    margin-bottom: 40px;
+  .section-title,
+  .process-title,
+  .finalcta-title,
+  .testi-title-main {
+    text-wrap: balance;
   }
 
-  .hero-section {
-    padding: 40px 0 84px;
-  }
-
-  .hero-title {
-    font-size: clamp(2.75rem, 12vw, 4rem);
-  }
-
+  .section-copy,
   .hero-subtitle,
-  .hero-supporting,
-  .process-copy,
-  .section-copy {
-    font-size: 1rem;
-    line-height: 1.75;
+  .process-subtitle,
+  .problem-copy,
+  .testi-subtitle,
+  .finalcta-text {
+    font-size: 0.98rem;
+    line-height: 1.68;
   }
 
-  .hero-card__meta {
-    flex-direction: column;
+  .problem-intro,
+  .inspect-header,
+  .comparison-header,
+  .testi-header {
+    margin-bottom: 32px;
+  }
+
+  .problem-card,
+  .inspect-card,
+  .benefit-card,
+  .cmp-card,
+  .faq-item,
+  .process-step {
+    border-radius: 22px;
+  }
+
+  .problem-card,
+  .inspect-card,
+  .benefit-card,
+  .cmp-card,
+  .process-step {
+    padding: 22px 20px;
+  }
+
+  .problem-warning-bar,
+  .finalcta-actions {
+    align-items: stretch;
+  }
+
+  .inspect-card-head {
     align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inspect-card-title {
+    text-align: left;
+  }
+
+  .inspect-card-point {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .process-step {
-    padding: 24px;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .process-step__row {
-    gap: 18px;
+  .process-step-num {
+    min-width: 0;
   }
 
-  .process-step__number {
-    min-width: 3.2rem;
+  .process-step-top {
+    flex-wrap: wrap;
   }
 
-  .process-visual {
-    padding: 18px;
+  .process-img-badge,
+  .process-img-stat {
+    position: static;
+    margin-top: 14px;
+    width: fit-content;
   }
 
-  .process-visual__frame {
-    min-height: 420px;
-    padding: 28px 24px;
+  .benefits-header-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .benefits-macro-stat {
+    padding: 14px 16px;
+  }
+
+  .testi-grid {
+    gap: 16px;
+  }
+
+  .finalcta-layout,
+  .faq-layout {
+    gap: 32px;
+  }
+
+  .modal-box {
+    padding: 32px 24px;
+    border-radius: 28px;
   }
 
   .btn-primary,
-  .btn-secondary {
+  .btn-ghost,
+  .btn-ghost-light,
+  .process-cta,
+  .finalcta-btn-main,
+  .testi-cta-btn,
+  .mobile-nav-cta {
     width: 100%;
   }
 }
 
-@media (max-width: 639px) {
-  .depa-header__inner {
-    min-height: 80px;
-    padding-block: 14px;
+@media (max-width: 479px) {
+  .container {
+    width: min(calc(100% - 28px), var(--container-max));
   }
 
-  .depa-header__logo-wrap {
-    height: 44px;
+  .site-header {
+    height: 72px;
   }
 
-  .depa-header__cta {
-    padding-inline: 20px;
-    min-height: 50px;
+  .site-header__logo {
+    height: 38px;
   }
 
-  .hero-highlights {
-    gap: 10px;
+  .site-header__cta {
+    min-height: 42px;
+    padding: 0 16px;
   }
 
-  .hero-highlight-chip {
-    font-size: 0.82rem;
+  .hero-meta {
+    gap: 6px;
+  }
+
+  .hero-meta-dot {
+    display: none;
+  }
+
+  .problem-warning-bar {
+    padding: 20px 18px;
+  }
+
+  .benefits-header-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .testi-quote {
+    bottom: 42px;
+  }
+
+  .modal-backdrop {
+    padding: 14px;
   }
 }

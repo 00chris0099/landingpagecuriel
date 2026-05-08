@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: '¿Qué necesito para agendar?',
-    a: 'Nombre, teléfono, distrito y la etapa en la que estás: compra, entrega o alquiler. En 2 minutos coordinamos.',
+    a: 'Nombre, teléfono y tipo de inmueble. Con eso coordinamos rápido por WhatsApp.',
   },
   {
     q: '¿Sirve para reclamar a la inmobiliaria?',

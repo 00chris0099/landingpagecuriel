@@ -8,7 +8,7 @@ interface InspectionModalProps {
 }
 
 export default function InspectionModal({ isOpen, onClose }: InspectionModalProps) {
-  const [form, setForm] = useState({ nombre: '', telefono: '', distrito: '', tipo: '' });
+  const [form, setForm] = useState({ nombre: '', telefono: '', tipo: '' });
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    const msg = `Hola, quiero agendar una inspección. Nombre: ${form.nombre}. Teléfono: ${form.telefono}. Distrito: ${form.distrito}. Tipo de inmueble: ${form.tipo}.`;
+    const msg = `Hola, quiero agendar una inspección. Nombre: ${form.nombre}. Teléfono: ${form.telefono}. Tipo de inmueble: ${form.tipo}.`;
     setTimeout(() => {
       window.open(`https://wa.me/51999999999?text=${encodeURIComponent(msg)}`, '_blank');
       onClose();
@@ -44,8 +44,8 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
 
         <div className="modal-header">
           <span className="modal-eyebrow">INSPECCIÓN TÉCNICA</span>
-          <h2 className="modal-title">Agendemos tu revisión</h2>
-          <p className="modal-subtitle">Coordinamos en menos de 24h. Sin compromisos.</p>
+          <h2 className="modal-title">Agenda tu inspección</h2>
+          <p className="modal-subtitle">Déjanos 3 datos y seguimos por WhatsApp.</p>
         </div>
 
         {submitted ? (
@@ -56,7 +56,7 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
         ) : (
           <form className="modal-form" onSubmit={handleSubmit}>
             <div className="modal-field">
-              <label htmlFor="modal-nombre">Nombre completo</label>
+              <label htmlFor="modal-nombre">Nombre</label>
               <input
                 id="modal-nombre"
                 type="text"
@@ -67,7 +67,7 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
               />
             </div>
             <div className="modal-field">
-              <label htmlFor="modal-telefono">Teléfono / WhatsApp</label>
+              <label htmlFor="modal-telefono">Teléfono</label>
               <input
                 id="modal-telefono"
                 type="tel"
@@ -75,17 +75,6 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
                 required
                 value={form.telefono}
                 onChange={(e) => setForm({ ...form, telefono: e.target.value })}
-              />
-            </div>
-            <div className="modal-field">
-              <label htmlFor="modal-distrito">Distrito</label>
-              <input
-                id="modal-distrito"
-                type="text"
-                placeholder="Distrito del departamento"
-                required
-                value={form.distrito}
-                onChange={(e) => setForm({ ...form, distrito: e.target.value })}
               />
             </div>
             <div className="modal-field">
@@ -97,10 +86,8 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
                 onChange={(e) => setForm({ ...form, tipo: e.target.value })}
               >
                 <option value="">Selecciona una opción</option>
-                <option value="Departamento nuevo">Departamento nuevo</option>
-                <option value="Departamento usado">Departamento usado</option>
-                <option value="Departamento para alquilar">Departamento para alquilar</option>
-                <option value="Casa">Casa</option>
+                <option value="Departamento de estreno">Departamento de estreno</option>
+                <option value="Departamento de segundo uso">Departamento de segundo uso</option>
               </select>
             </div>
             <button type="submit" className="modal-submit btn-primary">
@@ -109,7 +96,7 @@ export default function InspectionModal({ isOpen, onClose }: InspectionModalProp
               </svg>
               Continuar por WhatsApp
             </button>
-            <p className="modal-note">📍 Lima Metropolitana · Respuesta en menos de 2h</p>
+            <p className="modal-note">Lima Metropolitana · Respuesta rápida por WhatsApp</p>
           </form>
         )}
       </div>

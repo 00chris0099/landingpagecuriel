@@ -3,14 +3,37 @@
 import { useModal } from './ModalContext';
 
 const items = [
-  { icon: '/image/icons/electricidad.png', num: '01', title: 'Instalaciones eléctricas', description: 'Tomacorrientes, tablero, interruptores y señales de instalación deficiente.' },
-  { icon: '/image/icons/sanitaria.png', num: '02', title: 'Instalaciones sanitarias', description: 'Presión de agua, desagües, griferías, fugas visibles y conexiones.' },
-  { icon: '/image/icons/filtraciones.png', num: '03', title: 'Humedad y filtraciones', description: 'Manchas, filtraciones en muros, techos, pisos y zonas propensas.' },
-  { icon: '/image/icons/acabados.png', num: '04', title: 'Acabados', description: 'Pintura, enchapes, sellados, nivelación y detalles de entrega.' },
-  { icon: '/image/icons/puertas.png', num: '05', title: 'Puertas y ventanas', description: 'Apertura, cierre, ajuste, sellado, seguridad y marcos.' },
-  { icon: '/image/icons/muro.png', num: '06', title: 'Pisos y paredes', description: 'Desniveles, grietas, fisuras, piezas sueltas y calidad de instalación.' },
-  { icon: '/image/icons/gas.png', num: '07', title: 'Instalación de gas', description: 'Puntos de gas, ventilación, conexiones y posibles riesgos visibles.' },
-  { icon: '/image/icons/seguridad.png', num: '08', title: 'Seguridad general', description: 'Condiciones que afectan seguridad, habitabilidad y uso correcto.' },
+  {
+    icon: '/image/icons/electricidad.png',
+    num: '01',
+    title: 'Instalaciones eléctricas',
+    points: ['Tomacorrientes', 'Tablero', 'Interruptores', 'Señales de riesgo'],
+  },
+  {
+    icon: '/image/icons/sanitaria.png',
+    num: '02',
+    title: 'Instalaciones sanitarias',
+    points: ['Revisión de desagües', 'Revisión de agua', 'Detección de fugas', 'Verificación de sumideros'],
+  },
+  {
+    icon: '/image/icons/acabados.png',
+    num: '03',
+    title: 'Acabados',
+    featured: true,
+    points: ['Puertas', 'Ventanas', 'Marcos', 'Sellados', 'Pisos', 'Grietas', 'Fisuras', 'Desniveles', 'Piezas sueltas', 'Calidad de instalación'],
+  },
+  {
+    icon: '/image/icons/gas.png',
+    num: '04',
+    title: 'Instalación de gas',
+    points: ['Puntos de gas', 'Conexiones', 'Ventilación', 'Riesgos visibles'],
+  },
+  {
+    icon: '/image/icons/seguridad.png',
+    num: '05',
+    title: 'Seguridad general',
+    points: ['Habitabilidad', 'Anclajes', 'Riesgo visible', 'Uso correcto'],
+  },
 ];
 
 export default function WhatWeInspectSection() {
@@ -26,19 +49,25 @@ export default function WhatWeInspectSection() {
             <em>costarte dinero.</em>
           </h2>
           <p className="section-copy inspect-copy">
-            No revisamos por revisar. Evaluamos las áreas críticas que impactan seguridad, valor y costos posteriores.
+            Revisamos lo crítico para detectar observaciones, sustentar reclamos y evitar costos que después asumes tú.
           </p>
         </div>
 
         <div className="inspect-grid">
           {items.map((item) => (
-            <article key={item.num} className="inspect-card">
+            <article key={item.num} className={`inspect-card ${item.featured ? 'inspect-card--wide' : ''}`}>
               <div className="inspect-card-icon-wrap">
                 <img src={item.icon} alt={item.title} className="inspect-card-icon" />
               </div>
-              <span className="inspect-card-num">{item.num}</span>
-              <h3 className="inspect-card-title">{item.title}</h3>
-              <p className="inspect-card-desc">{item.description}</p>
+              <div className="inspect-card-head">
+                <span className="inspect-card-num">{item.num}</span>
+                <h3 className="inspect-card-title">{item.title}</h3>
+              </div>
+              <ul className="inspect-card-list">
+                {item.points.map((point) => (
+                  <li key={point} className="inspect-card-point">{point}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
